@@ -20,15 +20,10 @@ var instructors = [
 // 1. Find largest number
 // ---------------------------
 
-// var index = 0;
-// while (numbers[index] !== undefined) {
-//   length++;
-// }
-// return length;
 function findLargest(numbers) {
   var largest = 0;
-  var last = numbers.length;
-  for (var count = 0; count < last; count++) {
+  var lastInArray = numbers.length;
+  for (var count = 0; count < lastInArray; count++) {
     if (numbers[count] > largest) {
       largest = numbers[count];
     }
@@ -41,34 +36,83 @@ function findLargest(numbers) {
 // 2. Find longest string
 // ---------------------------
 
+function longestString(strings) {
+  var longest = strings[0];
 
+  for (var count = 0; count < strings.length; count++) {
+    if (strings[count].length > longest.length) {
+      longest = strings[count];
+    }
+    return longest;
+  };
 
 
 // ---------------------------
 // 3. Find even numbers
 // ---------------------------
+function showEven(numbers) {
+  var evenNums = [];
 
+  for (var count = 0; count < numbers.length; count++) {
+    if (numbers[count] % 2 === 0) {
+      evenNums.push(numbers[count]);
+    }
+  }
+  return evenNums;
+};
 
 
 // ---------------------------
 // 4. Find odd numbers
 // ---------------------------
+function showOdd(numbers) {
+  var oddNums = [];
 
+  for (var count = 0; count < numbers.length; count++) {
+    if (numbers[count] % 2 !== 0) {
+      oddNums.push(numbers[count]);
+    }
+  }
+  return oddNums;
+};
 
 // ---------------------------
 // 5. Find words that contain `is`
 // ---------------------------
 
+function containsIs (strings) {
+  var newArray = [];
+  for (var count = 0; count < strings.length; count++) {
+    if (strings[count].includes("is")) {
+      newArray.push(strings[count]);
+    }
+  }
+  return newArray;
+};
+
+// ---------------------------
+// 6. Join Both Arrays Together
+// ---------------------------
+function joins (numbers, strings) {
+  var newArray = [];
+  for (var count = 0; count < numbers.length; count++) {
+    newArray.push(numbers[count]);
+  }
+  for (var count = 0; count < strings.length; count++) {
+    newArray.push(strings[count]);
+  }
+  return newArray;
+};
+
 
 
 // ---------------------------
-// 5. Join Both Arrays Together
-// ---------------------------
-
-
-
-
-// ---------------------------
-// 6. Use the Instructors array and find all that teach JavaScript,
+// 7. Use the Instructors array and find all that teach JavaScript,
 //    then sort them alphabetically
 // ---------------------------
+
+function findJSteachers (instructors) {
+  var newArray = [];
+  for (var count = 0; count < instructors.length; count++) {
+    
+};
